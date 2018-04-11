@@ -25,7 +25,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
 
         public virtual decimal CrOpeningBalance { get; protected set; }
 
-        public virtual Group ParentID { get; protected set; }
+        public virtual Group Parent { get; protected set; }
 
         public virtual int NextFinancialYearID { get; protected set; }
 

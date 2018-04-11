@@ -44,8 +44,10 @@
     <Compile Include="Domain\FinancialAccounting\Classes\Group.cs" />
     <Compile Include="Domain\FinancialAccounting\Classes\GroupBalance.cs" />
     <Compile Include="Domain\FinancialAccounting\Classes\Ledger.cs" />
+    <Compile Include="Domain\FinancialAccounting\Classes\LedgerBalance.cs" />
     <Compile Include="Domain\FinancialAccounting\Classes\Subledger.cs" />
     <Compile Include="Domain\FinancialAccounting\Classes\FinancialYear.cs" />
+    <Compile Include="Domain\FinancialAccounting\Classes\SubLedgerBalance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

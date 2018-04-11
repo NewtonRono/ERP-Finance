@@ -10,5 +10,11 @@ namespace ERP.DataModel.FinancialAccounting.Contexts
         public DbSet<Ledger> Ledger { get; set; }
 
         public DbSet<SubLedger> SubLedger { get; set; }
+
+        public DbSet<FinancialYear> FinancialYear { get; set; }
+
+        public DbSet<LedgerBalance> LedgerBalance { get; set; }
+
+        public DbSet<SubLedgerBalance> SubLedgerBalance { get; set; }
     }
 }

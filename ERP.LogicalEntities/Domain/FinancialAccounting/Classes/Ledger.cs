@@ -21,9 +21,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
 
             public virtual Byte IsSystemLedger { get; protected set; }
 
-            public virtual int GroupId { get; protected set; }
-
-            public virtual Group ParentGroup { get; protected set; }      
+            public virtual Group Parent { get; protected set; }      
 
             public virtual IList<SubLedger> SubLedgers
             {
