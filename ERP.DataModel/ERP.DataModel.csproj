@@ -114,9 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FinancialAccounting\Contexts\DataModel.cs" />
-    <Compile Include="Migrations\201804111751407_UpdateDB1.cs" />
-    <Compile Include="Migrations\201804111751407_UpdateDB1.Designer.cs">
-      <DependentUpon>201804111751407_UpdateDB1.cs</DependentUpon>
+    <Compile Include="Migrations\201804111800088_INITDBCreate.cs" />
+    <Compile Include="Migrations\201804111800088_INITDBCreate.Designer.cs">
+      <DependentUpon>201804111800088_INITDBCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,8 +134,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804111751407_UpdateDB1.resx">
-      <DependentUpon>201804111751407_UpdateDB1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804111800088_INITDBCreate.resx">
+      <DependentUpon>201804111800088_INITDBCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

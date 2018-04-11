@@ -7,13 +7,13 @@ namespace ERP.DataModel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class UpdateDB1 : IMigrationMetadata
+    public sealed partial class INITDBCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateDB1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(INITDBCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201804111751407_UpdateDB1"; }
+            get { return "201804111800088_INITDBCreate"; }
         }
         
         string IMigrationMetadata.Source

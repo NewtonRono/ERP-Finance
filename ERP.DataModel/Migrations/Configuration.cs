@@ -35,8 +35,8 @@ namespace ERP.DataModel.Migrations
             //  modelBuilder.Entity<Group>().HasOptional(g => g.Groups);
 
             var primaryGroup = new Group { Id = 0, GroupName = "Primary" };
-            primaryGroup.Parent = primaryGroup;
-
+            
+            
             context.Group.Add(primaryGroup);
             //  p => p.GroupName,
             //  new Group
