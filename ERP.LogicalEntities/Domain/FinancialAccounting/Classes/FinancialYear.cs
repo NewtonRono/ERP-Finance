@@ -16,8 +16,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
 
         public virtual DateTime FinancialYearTo { get; protected set; }
 
-        public virtual DateTime FinancialYearTo1 { get; protected set; }
-
+       
         public virtual DateTime  MaintainBooksFrom { get; protected set; }
 
         public virtual Byte BaseYear { get; protected set; }
