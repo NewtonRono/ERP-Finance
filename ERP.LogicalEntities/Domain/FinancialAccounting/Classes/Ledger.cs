@@ -11,8 +11,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
             private IList<SubLedger> _subLedgers = new List<SubLedger>();
 
             [Key]
-            [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
+            [DatabaseGenerated(DatabaseGeneratedOption.None)]
             public virtual int Id { get; protected set; }
 
             public virtual string LedgerName { get; protected set; }

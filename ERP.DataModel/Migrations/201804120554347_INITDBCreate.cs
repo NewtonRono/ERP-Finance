@@ -27,10 +27,11 @@ namespace ERP.DataModel.Migrations
                 "dbo.Groups",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         InternalId = c.Int(nullable: false),
                         GroupName = c.String(),
                         IsSystemGroup = c.Byte(nullable: false),
+                        RootParent = c.Int(nullable: false),
                         Parent_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
@@ -41,7 +42,7 @@ namespace ERP.DataModel.Migrations
                 "dbo.Ledgers",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         LedgerName = c.String(),
                         LedgerHolderName = c.String(),
                         IsSystemLedger = c.Byte(nullable: false),
@@ -55,7 +56,7 @@ namespace ERP.DataModel.Migrations
                 "dbo.SubLedgers",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false),
                         SubLedgerName = c.String(),
                         LedgerHolderName = c.String(),
                         SystemLedger = c.Byte(nullable: false),

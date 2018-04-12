@@ -13,7 +13,7 @@ namespace ERP.DataModel.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201804111800088_INITDBCreate"; }
+            get { return "201804120554347_INITDBCreate"; }
         }
         
         string IMigrationMetadata.Source

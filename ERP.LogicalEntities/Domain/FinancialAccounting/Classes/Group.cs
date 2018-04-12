@@ -12,7 +12,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
         private IList<Ledger> _ledgers = new List<Ledger>();
 
         [Key]
-        
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public virtual int Id { get; set; }
 
         public virtual int InternalId { get; set; }
@@ -35,5 +35,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
 
         public virtual Group Parent { get; set; }
 
-            }
+        public virtual int RootParent { get; set; }
+
+    }
 }

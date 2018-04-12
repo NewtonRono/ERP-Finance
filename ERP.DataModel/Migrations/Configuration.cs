@@ -34,10 +34,45 @@ namespace ERP.DataModel.Migrations
             //start from here
             //  modelBuilder.Entity<Group>().HasOptional(g => g.Groups);
 
-            var primaryGroup = new Group { Id = 0, GroupName = "Primary" };
-            
-            
+            var primaryGroup = new Group { Id = 0, GroupName = "Primary" };                    
             context.Group.Add(primaryGroup);
+
+            // Add all assets
+            var assetGroup = new Group { Id = 1001, GroupName = "Assets", Parent = primaryGroup, RootParent = 0 };
+            context.Group.Add(assetGroup);
+
+            var currentAssetGroup = new Group { Id = 1002, GroupName = "Current Assets", Parent = primaryGroup, RootParent = 1001 };
+            context.Group.Add(currentAssetGroup);
+
+            var cashInHandAssetGroup = new Group { Id = 1003, GroupName = "Current Assets", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(currentAssetGroup);
+
+            var bankAccountsAssetGroup = new Group { Id = 1004, GroupName = "Bank Accounts", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(bankAccountsAssetGroup);
+
+            var sundryDebtorsAssetGroup = new Group { Id = 1005, GroupName = "Sundry Debtors", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(sundryDebtorsAssetGroup);
+
+            var stockInHandAssetGroup = new Group { Id = 1006, GroupName = "Stock In Hand", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(stockInHandAssetGroup);
+
+
+
+            var LiabilitiesGroup = new Group { Id = 2001, GroupName = "Liabilities", Parent = primaryGroup, RootParent = 0 };
+            context.Group.Add(LiabilitiesGroup);
+
+            var IncomeGroup = new Group { Id = 3001, GroupName = "Income", Parent = primaryGroup, RootParent = 0 };
+            context.Group.Add(IncomeGroup);
+
+            var ExpensesGroup = new Group { Id = 4001, GroupName = "Expenses", Parent = primaryGroup, RootParent = 0 };
+            context.Group.Add(ExpensesGroup);
+
+            var SuspenseGroup = new Group { Id = 5001, GroupName = "Suspense A/c", Parent = primaryGroup, RootParent = 0 };
+            context.Group.Add(SuspenseGroup);
+
+
+
+
             //  p => p.GroupName,
             //  new Group
             //  {

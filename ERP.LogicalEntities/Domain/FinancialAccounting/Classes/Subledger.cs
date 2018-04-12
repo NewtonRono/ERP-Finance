@@ -8,7 +8,7 @@ namespace ERP.LogicalEntities.Domain.FinancialAccounting.Classes
     public class SubLedger
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public virtual int Id { get; protected set; }
 
         public virtual string SubLedgerName { get; protected set; }
