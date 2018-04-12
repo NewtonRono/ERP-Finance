@@ -44,7 +44,7 @@ namespace ERP.DataModel.Migrations
             var currentAssetGroup = new Group { Id = 1002, GroupName = "Current Assets", Parent = primaryGroup, RootParent = 1001 };
             context.Group.Add(currentAssetGroup);
 
-            var cashInHandAssetGroup = new Group { Id = 1003, GroupName = "Current Assets", Parent = currentAssetGroup, RootParent = 1001 };
+            var cashInHandAssetGroup = new Group { Id = 1003, GroupName = "Cash In Hand", Parent = currentAssetGroup, RootParent = 1001 };
             context.Group.Add(currentAssetGroup);
 
             var bankAccountsAssetGroup = new Group { Id = 1004, GroupName = "Bank Accounts", Parent = currentAssetGroup, RootParent = 1001 };
@@ -56,10 +56,44 @@ namespace ERP.DataModel.Migrations
             var stockInHandAssetGroup = new Group { Id = 1006, GroupName = "Stock In Hand", Parent = currentAssetGroup, RootParent = 1001 };
             context.Group.Add(stockInHandAssetGroup);
 
+            var loansAdvancesAssetGroup = new Group { Id = 1007, GroupName = "Loans & Advances (Asset)", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(loansAdvancesAssetGroup);
 
+            var depositsAssetGroup = new Group { Id = 1008, GroupName = "Deposits (Asset)", Parent = currentAssetGroup, RootParent = 1001 };
+            context.Group.Add(depositsAssetGroup);
+
+            var fixedAssetGroup = new Group { Id = 1009, GroupName = "Fixed Assets", Parent = assetGroup, RootParent = 1001 };
+            context.Group.Add(fixedAssetGroup);
+
+            var investmentAssetGroup = new Group { Id = 1010, GroupName = "Investments", Parent = assetGroup, RootParent = 1001 };
+            context.Group.Add(investmentAssetGroup);
+
+            var miscExpensesAssetGroup = new Group { Id = 1011, GroupName = "Misc Expenses (Assets)", Parent = assetGroup, RootParent = 1001 };
+            context.Group.Add(miscExpensesAssetGroup);
 
             var LiabilitiesGroup = new Group { Id = 2001, GroupName = "Liabilities", Parent = primaryGroup, RootParent = 0 };
             context.Group.Add(LiabilitiesGroup);
+
+            var capitalLiabilitiesGroup = new Group { Id = 2002, GroupName = "Capital A/c", Parent = LiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(capitalLiabilitiesGroup);
+
+            var reservesSurplusLiabilitiesGroup = new Group { Id = 2003, GroupName = "Reserves & Surplus", Parent = capitalLiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(reservesSurplusLiabilitiesGroup);
+
+            var currentLiabilitiesGroup = new Group { Id = 2004, GroupName = "Current Liabilities", Parent = LiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(currentLiabilitiesGroup);
+
+            var sundryCreditorsGroup = new Group { Id = 2005, GroupName = "Sundry Creditors", Parent = currentLiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(sundryCreditorsGroup);
+
+            var provisionsLiabilityGroup = new Group { Id = 2006, GroupName = "Provisions", Parent = currentLiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(provisionsLiabilityGroup);
+
+            var dutiesTaxesLiabilityGroup = new Group { Id = 2007, GroupName = "Duties & Taxes", Parent = currentLiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(dutiesTaxesLiabilityGroup);
+
+            var bankODLiabilityGroup = new Group { Id = 2008, GroupName = "Bank OD A/cs", Parent = currentLiabilitiesGroup, RootParent = 2001 };
+            context.Group.Add(bankODLiabilityGroup);
 
             var IncomeGroup = new Group { Id = 3001, GroupName = "Income", Parent = primaryGroup, RootParent = 0 };
             context.Group.Add(IncomeGroup);
